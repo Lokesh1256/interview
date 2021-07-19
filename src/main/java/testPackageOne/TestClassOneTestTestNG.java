@@ -11,27 +11,4 @@ import org.testng.annotations.Test;
 
 public class TestClassOneTestTestNG {
 	
-	@Test
-	public void test1(){
-		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Administrator\\Desktop\\AutomationProject\\test-delete plz\\src\\main\\resources\\chromedriver.exe");
-		WebDriver driver= new ChromeDriver();
-		driver.get("https://www.bing.com/search");
-		WebDriverWait wait= new WebDriverWait(driver,20); 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='sb_form_q']")));
-		driver.findElement(By.xpath("//input[@id='sb_form_q']")).sendKeys("selenium webdriver");
-		WebDriverWait wait1= new WebDriverWait(driver,20); 
-		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@for='sb_form_go']")));
-		driver.findElement(By.xpath("//label[@for='sb_form_go']")).click();
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
-		driver.close();
-		
-	}
-	@Test
-	public void test2() {
-		
-		
-		
-	}
-	
 }
